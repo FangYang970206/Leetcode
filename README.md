@@ -4,12 +4,12 @@ This repo records my leetcode solutions. Every problem contains python and cpp i
 # Features
 Two categorys: different diffculty and topics. Thank for [**vs code extension for leetcode**](https://github.com/jdneo/vscode-leetcode).
 
-diffculty:
+Diffculty:
 - easy
 - medium
 - hard
 
-topics:
+Topics:
 - Array
 - Backtracking
 - Binary Indexed Tree
@@ -42,7 +42,7 @@ topics:
 - Unknown
 
 # Example
-Problem20:Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. 
+Problem20: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. 
 
 C++ version(faster than 100% of cpp submissions and memory usage beats 99.62% of cpp submissions):
 ```C++
