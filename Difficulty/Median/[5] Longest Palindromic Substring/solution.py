@@ -30,12 +30,12 @@
 # 
 # 
 #
-class Solution1:
+class Solution:
     def longestPalindrome(self, s: str) -> str:
         longestPStr = ''
         for i in range(len(s), 0, -1):
-            for j in range(len(s) - 1):
-                if s[j:i] == s[::-1]:
+            for j in range(len(s)):
+                if s[j:i] == s[j:i][::-1]:
                     if len(s[j:i]) > len(longestPStr):
                         longestPStr = s[j:i]
                 if len(longestPStr) > i:

@@ -3,7 +3,7 @@
 
 # 更多的方法
 1. 双行程哈希表
-首先，构建map<num, index>的哈希表，存入对应的值和索引，遍历map, 计算target-num, 利用哈希表常熟时间的寻址，只要当前索引不与前面的num索引冲突，即找到结果。时间复杂度$O(n)$, 空间复杂度$O(n)$.
+行程哈希表(第一次行程遍历nums生成字典，第二次遍历nums找结果）: 首先，构建dict<num, index>的字典（哈希表），存入对应的值和索引，遍历map, 计算target-num, 利用哈希表常数时间的寻址，只要在字典中找到的索引不与当前索引一样，即找到结果。时间复杂度$O(n)$, 空间复杂度$O(n)$.
 ```python3
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -14,7 +14,7 @@ class Solution:
                 return [i, nums_dict[find_value]]
 ```
 2. 单行程哈希表(最优)
-与上面一种的区别在于不先将所有的值和索引都放入map中，在遍历中放入，因为可能在前几个数字中就找到了满足的结果，这种方法在复杂度上与上一种一样，但实际要优于上一种方法。
+单行程哈希表（遍历一次nums）：与上面一种的区别在于不先将所有的值和索引都放入map中，在遍历中依次放入，少了一次遍历的时间，速度更快占用内存更小。时间复杂度$O(n)​$, 空间复杂度$O(n)。
 ```python3
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -25,3 +25,9 @@ class Solution:
                 return [i, nums_dict[find_value]]
             nums_dict[num] = i
 ```
+运行时间与内存占用比较：
+|方法 | 时间 | 内存|
+|----- | ---- | ---- |
+|常规   | 3244ms| 13.9Mb|
+|双行程 | 56ms| 15Mb  |
+|单行程 | 40ms| 14.1Mb|
