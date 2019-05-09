@@ -1,159 +1,36 @@
-# Leetcode
-This repo records my leetcode solutions. Every problem contains python and cpp implementation with readme_zh.
+| [English](README_EN.md) | 简体中文 |
 
-# Features
-Two categorys: different diffculty and topics. Thank for [**vs code extension for leetcode**](https://github.com/jdneo/vscode-leetcode).
-
-Diffculty:
-- easy
-- medium
-- hard
-
-Topics:
-- Array
-- Backtracking
-- Binary Indexed Tree
-- Binary Search
-- Binary Search Tree
-- BIt Manipulation
-- Breadth First Search
-- Depth First Search
-- Design
-- Divide And Conquer
-- Dynamic Programing
-- Graph
-- Greedy
-- Hash Table
-- Heap
-- Linked List
-- Map
-- Math
-- Queue
-- Reservoir Sample
-- Segment Tree
-- Sort
-- Stack
-- String
-- Topological Sort
-- Tree
-- Trie
-- Two Pointers
-- Union Find
-- Unknown
-
-# Example
-Problem20: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. 
-
-C++ version(faster than 100% of cpp submissions and memory usage beats 99.62% of cpp submissions):
-```C++
-#include <stack>
-
-bool isContainingTargetParenthese(const string& s, const vector<string>& t_p) {
-	for (auto it = t_p.begin(); it != t_p.end(); it++) {
-		if (s == *it)
-			return true;
-	}
-	return false;
-}
-
-string twoCharToString(char c1, char c2) {
-	string s = "xx";
-	s[0] = c1;
-	s[1] = c2;
-	return s;
-}
-
-class Solution {
-public:
-
-	bool isValid(string s) {
-		if (s.empty())
-			return true;
-		if (s.size() % 2 != 0)
-			return false;
-		vector<string> match_parenthese = { "()", "{}", "[]" };
-		if (s.size() == 2) {
-			return isContainingTargetParenthese(s, match_parenthese);
-		}
-		vector<string> mismatch_parenthese = { "(]", "(}", "[)", "[}", "{)", "{]" };
-		stack<char> stack1;
-		stack<char> stack2;
-		for (int i = 0; i < s.size(); i++)
-			stack1.push(s[i]);
-		char temp1 = stack1.top();
-		stack1.pop();
-		char temp2 = stack1.top();
-		stack1.pop();
-		while (!stack1.empty()) {
-			if (isContainingTargetParenthese(twoCharToString(temp2, temp1), match_parenthese)) {
-				if (stack2.empty()) {
-					temp1 = stack1.top();
-					stack1.pop();
-					temp2 = stack1.top();
-					stack1.pop();
-				}
-				else {
-					temp1 = stack2.top();
-					stack2.pop();
-					temp2 = stack1.top();
-					stack1.pop();
-				}
-			}
-			else if (isContainingTargetParenthese(twoCharToString(temp2, temp1), mismatch_parenthese))
-				return false;
-			else {
-				stack2.push(temp1);
-				temp1 = temp2;
-				temp2 = stack1.top();
-				stack1.pop();
-			}
-		}
-		if (stack2.empty() && isContainingTargetParenthese(twoCharToString(temp2, temp1), match_parenthese))
-			return true;
-		else
-			return false;
-	}
-};
-```
-python version:
-```python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        if not s:
-            return True
-        if len(s) % 2 != 0:
-            return False
-        parenthese = ['()', '{}', '[]']
-        if len(s) == 2:
-            return s in parenthese
-        from collections import deque
-        mis_parenthese = ['[)', '[}', '(]', '(}', '{]', '{)']
-        deque1 = deque()
-        deque2 = deque()
-        for elem in s:
-            deque1.append(elem)
-        temp1 = deque1.pop()
-        temp2 = deque1.pop()
-        while(deque1):
-            if (temp2+temp1) in parenthese:
-                if deque2:
-                    temp1 = deque2.pop()
-                    temp2 = deque1.pop()
-                else:
-                    temp1 = deque1.pop()
-                    temp2 = deque1.pop()
-            elif (temp2+temp1) in mis_parenthese:
-                return False
-            else:
-                deque2.append(temp1)
-                temp1 = temp2
-                temp2 = deque1.pop()
-            
-        if (not deque2) and (temp2+temp1) in parenthese:
-            return True
-        else:
-            return False
-```
+<p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
+<p align="center">
+    <img src="https://img.shields.io/badge/用户-fangyang-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/已解决-36/1036-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/简单-17-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/中等-17-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/困难-2-red.svg?" alt="">
+</p>
+<h1 align="center">LeetCode 的解答</h1>
 
 
-
+| # | 题目讲解 | 解答 | 通过率 | 难度 | 标签 |
+|:--:|:-----|:---------:|:----:|:----:|:----:|
+|0001|[Two Sum](Difficulty/Easy/%5B1%5D%20Two%20Sum/README.md)|[python](Difficulty/Easy/%5B1%5D%20Two%20Sum/solution.py),[C++](Difficulty/Easy/%5B1%5D%20Two%20Sum/solution.cpp)|42.13%|简单|[数组](https://leetcode.com/tag/array)<br>[哈希表](https://leetcode.com/tag/hash-table)|
+|0002|[Add Two Numbers](Difficulty/Median/%5B2%5D%20Add%20Two%20Numbers/README.md)|[python](Difficulty/Median/%5B2%5D%20Add%20Two%20Numbers/solution.py),[C++](Difficulty/Median/%5B2%5D%20Add%20Two%20Numbers/solution.cpp)|30.63%|中等|[数学](https://leetcode.com/tag/math)<br>[链表](https://leetcode.com/tag/linked-list)|
+|0003|[Longest Substring Without Repeating Characters](Difficulty/Median/%5B3%5D%20Longest%20Substring%20Without%20Repeating%20Characters/README.md)|[python](Difficulty/Median/%5B3%5D%20Longest%20Substring%20Without%20Repeating%20Characters/solution.py),[C++](Difficulty/Median/%5B3%5D%20Longest%20Substring%20Without%20Repeating%20Characters/solution.cpp)|27.94%|中等|[字符串](https://leetcode.com/tag/string)<br>[哈希表](https://leetcode.com/tag/hash-table)<br>[双指针](https://leetcode.com/tag/two-pointers)|
+|0004|[Median of Two Sorted Arrays](Difficulty/Hard/%5B4%5D%20Median%20of%20Two%20Sorted%20Arrays/README.md)|[python](Difficulty/Hard/%5B4%5D%20Median%20of%20Two%20Sorted%20Arrays/solution.py),[C++](Difficulty/Hard/%5B4%5D%20Median%20of%20Two%20Sorted%20Arrays/solution.cpp)|25.60%|困难|[数组](https://leetcode.com/tag/array)<br>[二分查找](https://leetcode.com/tag/binary-search)<br>[分而治之](https://leetcode.com/tag/divide-and-conquer)|
+|0005|[Longest Palindromic Substring](Difficulty/Median/%5B5%5D%20Longest%20Palindromic%20Substring/README.md)|[python](Difficulty/Median/%5B5%5D%20Longest%20Palindromic%20Substring/solution.py),[C++](Difficulty/Median/%5B5%5D%20Longest%20Palindromic%20Substring/solution.cpp)|26.65%|中等|[字符串](https://leetcode.com/tag/string)|
+|0006|[ZigZag Conversion](Difficulty/Median/%5B6%5D%20ZigZag%20Conversion/README.md)|[python](Difficulty/Median/%5B6%5D%20ZigZag%20Conversion/solution.py),[C++](Difficulty/Median/%5B6%5D%20ZigZag%20Conversion/solution.cpp)|30.75%|中等|[字符串](https://leetcode.com/tag/string)|
+|0007|[Reverse Integer](Difficulty/Easy/%5B7%5D%20Reverse%20Integer/README.md)|[python](Difficulty/Easy/%5B7%5D%20Reverse%20Integer/solution.py),[C++](Difficulty/Easy/%5B7%5D%20Reverse%20Integer/solution.cpp)|25.15%|简单|[数学](https://leetcode.com/tag/math)|
+|0008|[String to Integer (atoi)](Difficulty/Median/%5B8%5D%20String%20to%20Integer%20(atoi)/README.md)|[python](Difficulty/Median/%5B8%5D%20String%20to%20Integer%20(atoi)/solution.py),[C++](Difficulty/Median/%5B8%5D%20String%20to%20Integer%20(atoi)/solution.cpp)|14.50%|中等|[数学](https://leetcode.com/tag/math)<br>[字符串](https://leetcode.com/tag/string)|
+|0009|[Palindrome Number](Difficulty/Easy/%5B9%5D%20Palindrome%20Number/README.md)|[python](Difficulty/Easy/%5B9%5D%20Palindrome%20Number/solution.py),[C++](Difficulty/Easy/%5B9%5D%20Palindrome%20Number/solution.cpp)|42.07%|简单|[数学](https://leetcode.com/tag/math)|
+|0010|[Regular Expression Matching](Difficulty/Hard/%5B10%5D%20Regular%20Expression%20Matching/README.md)|[python](Difficulty/Hard/%5B10%5D%20Regular%20Expression%20Matching/solution.py),[C++](Difficulty/Hard/%5B10%5D%20Regular%20Expression%20Matching/solution.cpp)|24.99%|中等|[字符串](https://leetcode.com/tag/string)<br>[动态规划](https://leetcode.com/tag/dynamic-programming)<br>[回溯](https://leetcode.com/tag/backtracking)|
+|0011|[Container With Most Water](Difficulty/Median/%5B11%5D%20Container%20With%20Most%20Water/README.md)|[python](Difficulty/Median/%5B11%5D%20Container%20With%20Most%20Water/solution.py),[C++](Difficulty/Median/%5B11%5D%20Container%20With%20Most%20Water/solution.cpp)|42.75%|中等|[数组](https://leetcode.com/tag/array)<br>[双指针](https://leetcode.com/tag/two-pointers)|
+|0012|[Integer to Roman](Difficulty/Median/%5B12%5D%20Integer%20to%20Roman/README.md)|[python](Difficulty/Median/%5B12%5D%20Integer%20to%20Roman/solution.py),[C++](Difficulty/Median/%5B12%5D%20Integer%20to%20Roman/solution.cpp)|49.83%|中等|[字符串](https://leetcode.com/tag/string)<br>[数学](https://leetcode.com/tag/math)|
+|0013|[Roman to Integer](Difficulty/Easy/%5B13%5D%20Roman%20to%20Integer/README.md)|[python](Difficulty/Easy/%5B13%5D%20Roman%20to%20Integer/solution.py),[C++](Difficulty/Easy/%5B13%5D%20Roman%20to%20Integer/solution.cpp)|51.60%|简单|[字符串](https://leetcode.com/tag/string)<br>[数学](https://leetcode.com/tag/math)|
+|0014|[Longest Common Prefix](Difficulty/Easy/%5B14%5D%20Longest%20Common%20Prefix/README.md)|[python](Difficulty/Easy/%5B14%5D%20Longest%20Common%20Prefix/solution.py),[C++](Difficulty/Easy/%5B14%5D%20Longest%20Common%20Prefix/solution.cpp)|33.03%|简单|[字符串](https://leetcode.com/tag/string)<br>[数学](https://leetcode.com/tag/math)|
+|0015|[3Sum](Difficulty/Median/%5B15%5D%203Sum/README.md)|[python](Difficulty/Median/%5B15%5D%203Sum/solution.py),[C++](Difficulty/Median/%5B15%5D%203Sum/solution.cpp)|23.47%|中等|[双指针](https://leetcode.com/tag/two-pointers)<br>[数组](https://leetcode.com/tag/array)|
+|0016|[3Sum Closest](Difficulty/Median/%5B16%5D%203Sum%20Closest/README.md)|[python](Difficulty/Median/%5B16%5D%203Sum%20Closest/solution.py),[C++](Difficulty/Median/%5B16%5D%203Sum%20Closest/solution.cpp)|40.98%|中等|[双指针](https://leetcode.com/tag/two-pointers)<br>[数组](https://leetcode.com/tag/array)|
+|0017|[Letter Combinations of a Phone Number](Difficulty/Median/%5B17%5D%20Letter%20Combinations%20of%20a%20Phone%20Number/README.md)|[python](Difficulty/Median/%5B17%5D%20Letter%20Combinations%20of%20a%20Phone%20Number/solution.py),[C++](Difficulty/Median/%5B17%5D%20Letter%20Combinations%20of%20a%20Phone%20Number/solution.cpp)|40.47%|中等|[回溯](https://leetcode.com/tag/backtracking)<br>[字符串](https://leetcode.com/tag/string)|
+|0018|[4Sum](Difficulty/Median/%5B18%5D%204Sum/README.md)|[python](Difficulty/Median/%5B18%5D%204Sum/solution.py),[C++](Difficulty/Median/%5B18%5D%204Sum/solution.cpp)|29.76%|中等|[双指针](https://leetcode.com/tag/two-pointers)<br>[数组](https://leetcode.com/tag/array)<br>[哈希表](https://leetcode.com/tag/hash-table)|
+|0019|[Remove Nth Node From End of List](Difficulty/Median/%5B19%5D%20Remove%20Nth%20Node%20From%20End%20of%20List/README.md)|[python](Difficulty/Median/%5B19%5D%20Remove%20Nth%20Node%20From%20End%20of%20List/solution.py),[C++](Difficulty/Median/%5B19%5D%20Remove%20Nth%20Node%20From%20End%20of%20List/solution.cpp)|34.01%|中等|[双指针](https://leetcode.com/tag/two-pointers)<br>[链表](https://leetcode.com/tag/linked-list)|
+|0020|[Valid Parentheses](Difficulty/Easy/%5B20%5D%20Valid%20Parentheses/README.md)|[python](Difficulty/Easy/%5B20%5D%20Valid%20Parentheses/solution.py),[C++](Difficulty/Easy/%5B20%5D%20Valid%20Parentheses/solution.cpp)|35.94%|简单|[堆栈](https://leetcode.com/tag/stack)<br>[字符串](https://leetcode.com/tag/string)|
+|0021|[Merge Two Sorted Lists](Difficulty/Easy/%5B21%5D%20Merge%20Two%20Sorted%20Lists/README.md)|[python](Difficulty/Easy/%5B21%5D%20Merge%20Two%20Sorted%20Lists/solution.py),[C++](Difficulty/Easy/%5B21%5D%20Merge%20Two%20Sorted%20Lists/solution.cpp)|45.93%|简单|[链表](https://leetcode.com/tag/linked-list)|
