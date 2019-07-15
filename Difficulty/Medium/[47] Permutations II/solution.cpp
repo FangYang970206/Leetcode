@@ -1,11 +1,6 @@
-/*
- * @lc app=leetcode id=46 lang=cpp
- *
- * [46] Permutations
- */
 class Solution {
 public:
-    vector<vector<int>> permute(vector<int>& nums) {
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
         vector<vector<int>> res;
         int size = nums.size();
         permutation(res, 0, size - 1, nums);
@@ -18,7 +13,11 @@ public:
             return;
         }
         
+        unordered_set<int> record;
         for (int i = begin; i <= len; ++i){
+            if (record.find(nums[i]) != record.end())
+                continue;
+            record.insert(nums[i]);
             swap(nums[begin], nums[i]);
             permutation(res, begin + 1, len, nums);
             swap(nums[begin], nums[i]);
