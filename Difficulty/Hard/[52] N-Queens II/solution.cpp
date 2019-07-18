@@ -2,15 +2,13 @@ class Solution {
 public:
     int totalNQueens(int n) {
         int res = 0;
-        if (n < 1) return res;
-        vector<string> puz(n, string(n, '.'));
         vector<vector<int>> positions;
-        nQueens(res, puz, 0, n, positions);
+        nQueens(res, 0, n, n, positions);
         return res;
     }
 
-    void nQueens(int& res, vector<string>& puz, int row, int n, vector<vector<int>>& positions){
-        if (puz[n-1] != string(n, '.')){
+    void nQueens(int& res, int row, int n, int end, vector<vector<int>>& positions){
+        if (end == 0){
             res++;
             return;
         }
@@ -23,9 +21,7 @@ public:
             }
             if (posId == positions.size()){
                 positions.push_back({row, col});
-                puz[row][col] = 'Q';
-                nQueens(res, puz, row+1, n, positions);
-                puz[row][col] = '.';
+                nQueens(res, row+1, n, end - 1, positions);
                 positions.pop_back();
             }
         }    
