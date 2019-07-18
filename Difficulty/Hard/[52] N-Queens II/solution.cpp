@@ -1,12 +1,7 @@
-/*
- * @lc app=leetcode id=51 lang=cpp
- *
- * [51] N-Queens
- */
 class Solution {
 public:
-    vector<vector<string>> solveNQueens(int n) {
-        vector<vector<string>> res;
+    int totalNQueens(int n) {
+        int res = 0;
         if (n < 1) return res;
         vector<string> puz(n, string(n, '.'));
         vector<vector<int>> positions;
@@ -14,9 +9,9 @@ public:
         return res;
     }
 
-    void nQueens(vector<vector<string>>& res, vector<string>& puz, int row, int n, vector<vector<int>>& positions){
+    void nQueens(int& res, vector<string>& puz, int row, int n, vector<vector<int>>& positions){
         if (puz[n-1] != string(n, '.')){
-            res.push_back(puz);
+            res++;
             return;
         }
         for (int col = 0; col < n; col++){
