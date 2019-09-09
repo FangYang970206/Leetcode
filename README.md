@@ -3,10 +3,10 @@
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/用户-fangyang-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/已解决-36/1036-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/简单-17-green.svg?" alt="">
-    <img src="https://img.shields.io/badge/中等-17-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/困难-2-red.svg?" alt="">
+    <img src="https://img.shields.io/badge/已解决-80/1036-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/简单-22-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/中等-49-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/困难-18-red.svg?" alt="">
 </p>
 <h1 align="center">LeetCode 的解答</h1>
 
@@ -92,3 +92,4 @@
 |0077|[Combinations](Difficulty/Medium/%5B77%5D%20Combinations/README.md)|[python](Difficulty/Medium/%5B77%5D%20Combinations/solution.py),[C++](Difficulty/Medium/%5B77%5D%20Combinations/solution.cpp)|46.10%|中等|[回溯](https://leetcode.com/tag/backtracking)|
 |0078|[Subsets](Difficulty/Medium/%5B78%5D%20Subsets/README.md)|[python](Difficulty/Medium/%5B78%5D%20Subsets/solution.py),[C++](Difficulty/Medium/%5B78%5D%20Subsets/solution.cpp)|51.09%|中等|[回溯](https://leetcode.com/tag/backtracking)<br>[数组](https://leetcode.com/tag/array)<br>[位操作](https://leetcode.com/tag/bit-manipulation)|
 |0079|[Word Search](Difficulty/Medium/%5B79%5D%20Word%20Search/README.md)|[python](Difficulty/Medium/%5B79%5D%20Word%20Search/solution.py),[C++](Difficulty/Medium/%5B79%5D%20Word%20Search/solution.cpp)|30.43%|中等|[回溯](https://leetcode.com/tag/backtracking)<br>[数组](https://leetcode.com/tag/array)|
+|0080|[Remove Duplicates from Sorted Array II](Difficulty/Medium/%5B80%5D%20Remove%20Duplicates%20from%20Sorted%20Array%20II/README.md)|[python](Difficulty/Medium/%5B80%5D%20Remove%20Duplicates%20from%20Sorted%20Array%20II/solution.py),[C++](Difficulty/Medium/%5B80%5D%20Remove%20Duplicates%20from%20Sorted%20Array%20II/solution.cpp)|39.55%|中等|[双指针](https://leetcode.com/tag/two-pointers)<br>[数组](https://leetcode.com/tag/array)|
