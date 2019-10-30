@@ -1,12 +1,12 @@
-| English | [简体中文](README.md) |
+| English | [????](README.md) |
 
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/User-fangyang-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Solved-36/1036-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Easy-17-green.svg?" alt="">
-    <img src="https://img.shields.io/badge/Medium-17-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/Hard-2-red.svg?" alt="">
+    <img src="https://img.shields.io/badge/Solved-120/1040-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/Easy-29-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/Medium-67-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/Hard-24-red.svg?" alt="">
 </p>
 <h1 align="center">LeetCode Solutions</h1>
 

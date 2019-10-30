@@ -3,10 +3,10 @@
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/用户-fangyang-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/已解决-80/1036-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/简单-22-green.svg?" alt="">
-    <img src="https://img.shields.io/badge/中等-49-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/困难-18-red.svg?" alt="">
+    <img src="https://img.shields.io/badge/已解决-120/1040-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/简单-29-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/中等-67-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/困难-24-red.svg?" alt="">
 </p>
 <h1 align="center">LeetCode 的解答</h1>
 
