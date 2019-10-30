@@ -1,4 +1,4 @@
-| English | [????](README.md) |
+| English | [Chinese](README.md) |
 
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
