@@ -15,7 +15,7 @@
 
 我的方法是用vector构造一个set，利用set内部是红黑树，已排好序，然后遍历set，求最大连续序列，然后构造set需要消耗O(nlogn)的复杂度，所以不符合要求。
 
-看了discuss, [StefanPochmann的solution](https://leetcode.com/problems/longest-consecutive-sequence/discuss/41057/Simple-O(n)-with-Explanation-Just-walk-each-streak)很有意思，就在python的solution中，很好懂，检测的当前数的前一位在不在，如果不在，就开始计数, 这是因为如果前一位在的话，当前的数之前就计算过，这样就可以避免重复计算，然而开始的时候还是用到了set，构造set需要O(nlogn), 判断是否在set其实是logn, 遍历也是O(nlogn)。
+看了discuss, [StefanPochmann的solution](https://leetcode.com/problems/longest-consecutive-sequence/discuss/41057/Simple-O(n)-with-Explanation-Just-walk-each-streak)很有意思，就在python的solution中，很好懂，检测的当前数的前一位在不在，如果不在，就开始计数, 这是因为如果前一位在的话，当前的数之前就计算过，这样就可以避免重复计算，然而开始的时候还是用到了set，构造set需要O(nlogn), 判断是否在set其实是logn, 遍历也是O(nlogn)，将set改为dict可以变为O(n), 具体参见https://leetcode-cn.com/problems/longest-consecutive-sequence/solution/zui-chang-lian-xu-xu-lie-by-leetcode/ 的方法三java版本。
 
 更有趣的是下面的版本, 来自[mzchen的solution](https://leetcode.com/problems/longest-consecutive-sequence/discuss/41088/Possibly-shortest-cpp-solution-only-6-lines.)：
 ```c++
