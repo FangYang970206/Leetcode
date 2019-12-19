@@ -3,10 +3,10 @@
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/User-fangyang-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Solved-120/1040-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Easy-29-green.svg?" alt="">
-    <img src="https://img.shields.io/badge/Medium-67-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/Hard-24-red.svg?" alt="">
+    <img src="https://img.shields.io/badge/Solved-138/1040-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/Easy-33-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/Medium-75-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/Hard-30-red.svg?" alt="">
 </p>
 <h1 align="center">LeetCode Solutions</h1>
 
@@ -149,3 +149,4 @@
 |0135|[Candy](Difficulty/Hard/%5B135%5D%20Candy/README.md)|[python3](Difficulty/Hard/%5B135%5D%20Candy/solution.py),[C++](Difficulty/Hard/%5B135%5D%20Candy/solution.cpp)|27.76%|Hard|[greedy](https://leetcode.com/tag/greedy)|
 |0136|[Single Number](Difficulty/Easy/%5B136%5D%20Single%20Number/README.md)|[python3](Difficulty/Easy/%5B136%5D%20Single%20Number/solution.py),[C++](Difficulty/Easy/%5B136%5D%20Single%20Number/solution.cpp)|59.08%|Easy|[hash-table](https://leetcode.com/tag/hash-table)<br>[bit-manipulation](https://leetcode.com/tag/bit-manipulation)|
 |0137|[Single Number II](Difficulty/Medium/%5B137%5D%20Single%20Number%20II/README.md)|[python3](Difficulty/Medium/%5B137%5D%20Single%20Number%20II/solution.py),[C++](Difficulty/Medium/%5B137%5D%20Single%20Number%20II/solution.cpp)|45.18%|Medium|[bit-manipulation](https://leetcode.com/tag/bit-manipulation)|
+|0138|[Copy List with Random Pointer](Difficulty/Medium/%5B138%5D%20Copy%20List%20with%20Random%20Pointer/README.md)|[python3](Difficulty/Medium/%5B138%5D%20Copy%20List%20with%20Random%20Pointer/solution.py),[C++](Difficulty/Medium/%5B138%5D%20Copy%20List%20with%20Random%20Pointer/solution.cpp)|25.82%|Medium|[hash-table](https://leetcode.com/tag/hash-table)<br>[linked-list](https://leetcode.com/tag/linked-list)|
