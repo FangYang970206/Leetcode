@@ -51,4 +51,68 @@
 
 # 方法
 
-这一题挺无聊的，思路挺好想，但写出来很多bug，耗时很多。。。
+这一题挺无聊的，思路挺好想，但写出来很多bug，耗时很多。。。看了discuss，推荐更加更好的思路：
+C++:
+```c++
+int compareVersion(string version1, string version2) {
+    int i = 0; 
+    int j = 0;
+    int n1 = version1.size(); 
+    int n2 = version2.size();
+    
+    int num1 = 0;
+    int num2 = 0;
+    while(i<n1 || j<n2)
+    {
+        while(i<n1 && version1[i]!='.'){
+            num1 = num1*10+(version1[i]-'0');
+            i++;
+        }
+        
+        while(j<n2 && version2[j]!='.'){
+            num2 = num2*10+(version2[j]-'0');;
+            j++;
+        }
+        
+        if(num1>num2) return 1;
+        else if(num1 < num2) return -1;
+        
+        num1 = 0;
+        num2 = 0;
+        i++;
+        j++;
+    }
+    
+    return 0;
+}
+
+int compareVersion(string version1, string version2) {
+    for(auto& w : version1) if (w == '.') w=' ';
+    for(auto& w : version2) if (w == '.') w=' ';
+    istringstream s1(version1), s2(version2);
+    while(1) {
+        int n1,n2;
+        if (not(s1 >> n1) ) n1 = 0;
+        if (not(s2 >> n2) ) n2 = 0;
+        if (not s1 and not s2) return 0;
+        if (n1<n2) return -1;
+        if (n1>n2) return 1;
+    }
+}
+```
+
+python3:
+
+```python
+def compareVersion(self, version1, version2):
+        versions1 = [int(v) for v in version1.split(".")]
+        versions2 = [int(v) for v in version2.split(".")]
+        for i in range(max(len(versions1),len(versions2))):
+            v1 = versions1[i] if i < len(versions1) else 0
+            v2 = versions2[i] if i < len(versions2) else 0
+            if v1 > v2:
+                return 1
+            elif v1 < v2:
+                return -1;
+        return 0;
+```
