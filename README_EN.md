@@ -3,10 +3,10 @@
 <p align="center"><img width="300" src="logo/leetcode-logo.png"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/User-fangyang-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Solved-138/1040-blue.svg?" alt="">
-    <img src="https://img.shields.io/badge/Easy-33-green.svg?" alt="">
-    <img src="https://img.shields.io/badge/Medium-75-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/Hard-30-red.svg?" alt="">
+    <img src="https://img.shields.io/badge/Solved-196/1377-blue.svg?" alt="">
+    <img src="https://img.shields.io/badge/Easy-57-green.svg?" alt="">
+    <img src="https://img.shields.io/badge/Medium-100-orange.svg?" alt="">
+    <img src="https://img.shields.io/badge/Hard-39-red.svg?" alt="">
 </p>
 <h1 align="center">LeetCode Solutions</h1>
 
@@ -207,3 +207,4 @@
 |0205|[Isomorphic Strings](Difficulty/Easy/%5B205%5D%20Isomorphic%20Strings/README.md)|[python3](Difficulty/Easy/%5B205%5D%20Isomorphic%20Strings/solution.py),[C++](Difficulty/Easy/%5B205%5D%20Isomorphic%20Strings/solution.cpp)|36.75%|Easy|[hash-table](https://leetcode.com/tag/hash-table)|
 |0206|[Reverse Linked List](Difficulty/Easy/%5B206%5D%20Reverse%20Linked%20List/README.md)|[python3](Difficulty/Easy/%5B206%5D%20Reverse%20Linked%20List/solution.py),[C++](Difficulty/Easy/%5B206%5D%20Reverse%20Linked%20List/solution.cpp)|52.58%|Easy|[linked-list](https://leetcode.com/tag/linked-list)|
 |0207|[Course Schedule](Difficulty/Medium/%5B207%5D%20Course%20Schedule/README.md)|[python3](Difficulty/Medium/%5B207%5D%20Course%20Schedule/solution.py),[C++](Difficulty/Medium/%5B207%5D%20Course%20Schedule/solution.cpp)|36.74%|Medium|[depth-first-search](https://leetcode.com/tag/depth-first-search)<br>[breadth-first-search](https://leetcode.com/tag/breadth-first-search/)<br>[graph](https://leetcode.com/tag/graph)<br>[topological-sort](https://leetcode.com/tag/topological-sort/)|
+|0208|[Implement Trie](Difficulty/Medium/%5B208%5D%20Implement%20Trie/README.md)|[python3](Difficulty/Medium/%5B208%5D%20Implement%20Trie/solution.py),[C++](Difficulty/Medium/%5B208%5D%20Implement%20Trie/solution.cpp)|36.85%|Medium|[design](https://leetcode.com/tag/design)<br>[trie](https://leetcode.com/tag/trie/)|
