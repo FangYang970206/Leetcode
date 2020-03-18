@@ -1,6 +1,10 @@
+from collections import deque
+
 class Solution:
     def canFinish(self, numCourses, prerequisites):
-        graph = [[] for _ in range(numCourses)]
+        graph = []
+        for _ in range(numCourses):
+            graph.append([])
         indegrees = [0] * numCourses
         for v in prerequisites:
             graph[v[1]].append(v[0])
